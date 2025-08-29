@@ -13,6 +13,9 @@
     },
     "text2": {
       "type": "text"
+    },
+    "link": {
+      "type": "string"
     }
   },
   "config": {}

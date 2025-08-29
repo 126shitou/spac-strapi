@@ -58,6 +58,7 @@ export interface SharedHighlight extends Struct.ComponentSchema {
     displayName: 'highlight';
   };
   attributes: {
+    link: Schema.Attribute.String;
     span: Schema.Attribute.String;
     text1: Schema.Attribute.Text;
     text2: Schema.Attribute.Text;

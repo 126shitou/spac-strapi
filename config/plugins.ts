@@ -1,7 +1,5 @@
 export default () => ({
-    'populate-all': {
-        enabled: true,
-    },
-   
-}
-);
+  "populate-all": {
+    enabled: true,
+  },
+});

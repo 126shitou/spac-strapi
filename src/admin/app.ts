@@ -1,4 +1,16 @@
-import type { StrapiApp } from '@strapi/strapi/admin';
+import type { StrapiApp } from "@strapi/strapi/admin";
+import {
+  setPluginConfig,
+  type PluginConfig,
+} from "@_sh/strapi-plugin-ckeditor";
+import { htmlPreset, markdownPreset } from "./config";
+
+const myConfig: PluginConfig = {
+  /**
+   * Use presets from config.ts
+   */
+  presets: [htmlPreset, markdownPreset],
+};
 
 export default {
   config: {
@@ -27,11 +39,14 @@ export default {
       // 'tr',
       // 'uk',
       // 'vi',
-      'zh-Hans',
+      "zh-Hans",
       // 'zh',
     ],
   },
   bootstrap(app: StrapiApp) {
     console.log(app);
+  },
+  register() {
+    setPluginConfig(myConfig);
   },
 };

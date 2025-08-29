@@ -619,11 +619,11 @@ export interface ApiTestTest extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    asdasdasd: Schema.Attribute.RichText &
+    aaaaa: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
-          preset: 'defaultMarkdown';
+          preset: 'Markdown\u7F16\u8F91\u5668';
         }
       >;
     createdAt: Schema.Attribute.DateTime;
