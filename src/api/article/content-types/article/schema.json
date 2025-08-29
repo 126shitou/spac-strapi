@@ -39,13 +39,6 @@
       "options": {
         "preset": "完善富文本编辑器"
       }
-    },
-    "Editor": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "Markdown编辑器"
-      }
     }
   }
 }
