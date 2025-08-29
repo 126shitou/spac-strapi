@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_dynamic_zone_how_to_uses",
+  "info": {
+    "displayName": "How_To_Use"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "component",
+      "component": "shared.steps",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

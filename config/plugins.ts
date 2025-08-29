@@ -1,1 +1,7 @@
-export default () => ({});
+export default () => ({
+    'populate-all': {
+        enabled: true,
+    },
+   
+}
+);

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_dynamic_zone_faqs",
+  "info": {
+    "displayName": "FAQ"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "maxLength": 100,
+      "required": true
+    },
+    "faqs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::faq.faq"
+    },
+    "sub_heading": {
+      "type": "component",
+      "component": "shared.highlight",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

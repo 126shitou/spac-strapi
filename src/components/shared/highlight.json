@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_highlights",
+  "info": {
+    "displayName": "highlight"
+  },
+  "options": {},
+  "attributes": {
+    "text1": {
+      "type": "text"
+    },
+    "span": {
+      "type": "string"
+    },
+    "text2": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
