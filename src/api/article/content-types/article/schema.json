@@ -9,11 +9,7 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": false
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
     "seo": {
       "type": "component",
@@ -38,9 +34,18 @@
       "required": false
     },
     "content": {
-      "type": "richtext",
-      "required": true,
-      "minLength": 200
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "完善富文本编辑器"
+      }
+    },
+    "Editor": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "Markdown编辑器"
+      }
     }
   }
 }
