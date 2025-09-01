@@ -373,6 +373,156 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAiBikiniAiBikini extends Struct.SingleTypeSchema {
+  collectionName: 'ai_bikinis';
+  info: {
+    displayName: '/ai-bikini';
+    pluralName: 'ai-bikinis';
+    singularName: 'ai-bikini';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ai-bikini.ai-bikini'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAiBoomAiBoom extends Struct.SingleTypeSchema {
+  collectionName: 'ai_booms';
+  info: {
+    displayName: '/ai-boom';
+    pluralName: 'ai-booms';
+    singularName: 'ai-boom';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ai-boom.ai-boom'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAiKissAiKiss extends Struct.SingleTypeSchema {
+  collectionName: 'ai_kisses';
+  info: {
+    displayName: '/ai-kiss';
+    pluralName: 'ai-kisses';
+    singularName: 'ai-kiss';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ai-kiss.ai-kiss'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAiPetalDispersionEffectAiPetalDispersionEffect
+  extends Struct.SingleTypeSchema {
+  collectionName: 'ai_petal_dispersion_effects';
+  info: {
+    displayName: '/ai-petal-dispersion-effect';
+    pluralName: 'ai-petal-dispersion-effects';
+    singularName: 'ai-petal-dispersion-effect';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.Component<'dynamic-zone.faq', false>;
+    feature: Schema.Attribute.Component<'dynamic-zone.features', false>;
+    hero: Schema.Attribute.Component<'dynamic-zone.hero', false>;
+    howtouse: Schema.Attribute.Component<'dynamic-zone.how-to-use', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ai-petal-dispersion-effect.ai-petal-dispersion-effect'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAiSquishEffectAiSquishEffect
+  extends Struct.SingleTypeSchema {
+  collectionName: 'ai_squish_effects';
+  info: {
+    displayName: '/ai-squish-effect';
+    pluralName: 'ai-squish-effects';
+    singularName: 'ai-squish-effect';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.Component<'dynamic-zone.faq', false>;
+    feature: Schema.Attribute.Component<'dynamic-zone.features', false>;
+    hero: Schema.Attribute.Component<'dynamic-zone.hero', false>;
+    howtouse: Schema.Attribute.Component<'dynamic-zone.how-to-use', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ai-squish-effect.ai-squish-effect'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
@@ -408,13 +558,45 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false> &
       Schema.Attribute.Required;
-    slug: Schema.Attribute.UID<'title'>;
+    slug: Schema.Attribute.UID<''> & Schema.Attribute.Required;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 50;
       }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCrushEffectCrushEffect extends Struct.SingleTypeSchema {
+  collectionName: 'crush_effects';
+  info: {
+    displayName: '/crush-effect';
+    pluralName: 'crush-effects';
+    singularName: 'crush-effect';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.Component<'dynamic-zone.faq', false>;
+    feature: Schema.Attribute.Component<'dynamic-zone.features', false>;
+    hero: Schema.Attribute.Component<'dynamic-zone.hero', false>;
+    howtouse: Schema.Attribute.Component<'dynamic-zone.how-to-use', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::crush-effect.crush-effect'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1113,7 +1295,13 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::ai-bikini.ai-bikini': ApiAiBikiniAiBikini;
+      'api::ai-boom.ai-boom': ApiAiBoomAiBoom;
+      'api::ai-kiss.ai-kiss': ApiAiKissAiKiss;
+      'api::ai-petal-dispersion-effect.ai-petal-dispersion-effect': ApiAiPetalDispersionEffectAiPetalDispersionEffect;
+      'api::ai-squish-effect.ai-squish-effect': ApiAiSquishEffectAiSquishEffect;
       'api::article.article': ApiArticleArticle;
+      'api::crush-effect.crush-effect': ApiCrushEffectCrushEffect;
       'api::crush-effects-showcase.crush-effects-showcase': ApiCrushEffectsShowcaseCrushEffectsShowcase;
       'api::faq.faq': ApiFaqFaq;
       'api::global.global': ApiGlobalGlobal;

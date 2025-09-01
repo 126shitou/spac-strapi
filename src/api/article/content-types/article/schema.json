@@ -30,8 +30,9 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "title",
-      "required": false
+      "targetField": "",
+      "required": true,
+      "regex": "^[a-z0-9-]+$"
     },
     "content": {
       "type": "customField",

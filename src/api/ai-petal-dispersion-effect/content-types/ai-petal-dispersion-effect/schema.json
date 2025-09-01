@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "ai_petal_dispersion_effects",
+  "info": {
+    "singularName": "ai-petal-dispersion-effect",
+    "pluralName": "ai-petal-dispersion-effects",
+    "displayName": "/ai-petal-dispersion-effect"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "dynamic-zone.hero",
+      "repeatable": false
+    },
+    "feature": {
+      "type": "component",
+      "component": "dynamic-zone.features",
+      "repeatable": false
+    },
+    "faq": {
+      "type": "component",
+      "component": "dynamic-zone.faq",
+      "repeatable": false
+    },
+    "howtouse": {
+      "type": "component",
+      "component": "dynamic-zone.how-to-use",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "ai_bikinis",
+  "info": {
+    "singularName": "ai-bikini",
+    "pluralName": "ai-bikinis",
+    "displayName": "/ai-bikini"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "ai_kisses",
+  "info": {
+    "singularName": "ai-kiss",
+    "pluralName": "ai-kisses",
+    "displayName": "/ai-kiss"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

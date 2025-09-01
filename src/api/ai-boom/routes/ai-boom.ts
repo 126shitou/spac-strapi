@@ -1,0 +1,7 @@
+/**
+ * ai-boom router
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreRouter('api::ai-boom.ai-boom');

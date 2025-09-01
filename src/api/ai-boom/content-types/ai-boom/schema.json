@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "ai_booms",
+  "info": {
+    "singularName": "ai-boom",
+    "pluralName": "ai-booms",
+    "displayName": "/ai-boom"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}
