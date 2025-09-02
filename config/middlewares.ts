@@ -8,12 +8,24 @@ export default [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": ["'self'", "https:"],
+          "script-src": ["'self'","192.168.*", "*.tinymce.com", "*.tiny.cloud", "https:"],
+
+          "connect-src": [
+            "'self'",
+            "https:",
+            "*.tinymce.com",
+            "*.tiny.cloud",
+            "blob:",
+            "*.strapi.io",
+            "192.168.*",
+          ],
           "img-src": [
             "'self'",
             "data:",
             "blob:",
             "dl.airtable.com",
+            "*.tinymce.com",
+            "*.tiny.cloud",
             // 安全检查：确保环境变量存在后再调用 replace 方法
             process.env.CLOUDFLARE_PUBLIC_ACCESS_URL?.replace(
               /^https?:\/\//,
@@ -31,8 +43,16 @@ export default [
               ""
             ) || "", // 如果环境变量未定义，使用空字符串作为默认值
           ],
-          upgradeInsecureRequests: null,
+          "style-src": [
+            "'self'",
+            "'unsafe-inline'",
+            "*.tinymce.com",
+            "*.tiny.cloud",
+            "192.168.*",
+          ],
+          "font-src": ["'self'", "*.tinymce.com", "*.tiny.cloud"],
         },
+        upgradeInsecureRequests: null,
       },
     },
   },

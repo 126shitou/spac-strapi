@@ -36,10 +36,8 @@
     },
     "content": {
       "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "完善富文本编辑器"
-      }
+      "customField": "plugin::tinymce.tinymce",
+      "required": true
     }
   }
 }

@@ -535,12 +535,8 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   };
   attributes: {
     content: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: '\u5B8C\u5584\u5BCC\u6587\u672C\u7F16\u8F91\u5668';
-        }
-      >;
+      Schema.Attribute.Required &
+      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
