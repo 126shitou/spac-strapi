@@ -106,6 +106,7 @@ node_modules
 !.yarn/unplugged
 !.yarn/patches
 !.yarn/releases
+
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
